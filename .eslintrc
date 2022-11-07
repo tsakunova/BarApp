@@ -1,13 +1,14 @@
 {
-  "extends": ["react-app", "react-app/jest"],
-  "plugins": ["prettier"],
+  "extends": ["react-app", "react-app/jest",  "plugin:react-hooks/recommended"],
+  "plugins": ["prettier", "react-hooks"],
   "settings": {
     "import/resolver": {
       "typescript": {}
     }
   },
   "rules": {
-    
+     "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
     "prettier/prettier": ["warn", {
       "semi": true,
     }],
